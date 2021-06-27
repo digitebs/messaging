@@ -45,7 +45,7 @@ public class MessagingService implements IMessagingService {
   public void forward(String user, String to) throws NoMessageAvailableException {
     MessageThread mt = repo.getMessageThread(user);
 
-    // we create another thread where the user is the current user
+    // we create another thread where from is the current user
     // at the same time tab the contents
     MessageThread mt1 = new MessageThread(user, ("\n" + mt.toString()).
         replaceAll("\n", "\n\t\t"));

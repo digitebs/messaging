@@ -17,6 +17,8 @@ public class MessageRepo implements IMessageRepo {
 
   /*
     i start from 0 index
+
+    when we read the message we remove it from messages.
    */
   public MessageThread readMessageThread(String user, int i) throws NoMessageAvailableException {
     Messages m;
